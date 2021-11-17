@@ -1,0 +1,25 @@
+<style>
+    #map {
+        width: 100%;
+        height: 400px;
+    }
+
+</style>
+
+<h1>{{title}}</h1>
+<div class="info">
+    <h3>List of all restaurants</h3>
+    <a href="/restaurants/new">Create new restaurant</a>
+    <ul>
+        {{#each restaurants}}
+            <li>
+                <a href="/restaurants/{{ this._id}}">{{ this.name}}</a>
+                |
+                <a href="/restaurants/{{ this._id}}/delete">Delete</a>
+            </li>
+        {{/each }}
+    </ul>
+    <div id="map"></div>
+
+    {{!-- add map here --}}
+</div>
